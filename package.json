@@ -1,0 +1,21 @@
+{
+  "name": "static-blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "static-server pages",
+    "build": "rm -rf dist && node ./scripts/build.js",
+    "serve": "static-server dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "front-matter": "^4.0.2",
+    "mustache": "4.2.0",
+    "showdown": "^2.1.0",
+    "static-server": "^2.2.1"
+  }
+}
