@@ -3,6 +3,7 @@ import Mustache from "mustache";
 import frontMatter from "front-matter";
 import showdown from "showdown";
 import config from "../config.js";
+import { mdHighlighter } from "./highlighter.js";
 
 const {
   assets: ASSETS,
@@ -56,7 +57,7 @@ async function buildContentsFiles() {
       (await fs.readFile(`${CONTENTS}/${file}/index.md`)).toString()
     );
     const template = await fs.readFile("templates/post.html");
-    const bodyHtml = new showdown.Converter().makeHtml(body);
+    const bodyHtml = new showdown.Converter().makeHtml(mdHighlighter(body));
     const html = Mustache.render(template.toString(), {
       ...config,
       post: config.updatePost({ ...attributes, body: bodyHtml }),

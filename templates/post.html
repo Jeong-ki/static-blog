@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ post.title }}</title>
     <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/github.css" />
   </head>
   <body>
     <header>
@@ -16,7 +17,9 @@
     </header>
     <main>
       <h1>{{ post.title }}</h1>
-      <p>Written by {{ site.auther }} on {{ post.created_at }}</p>
+      <p class="author">
+        Written by {{ site.auther }} on {{ post.created_at }}
+      </p>
       {{{ post.body }}}
     </main>
   </body>

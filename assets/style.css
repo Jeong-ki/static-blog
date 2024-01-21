@@ -216,3 +216,8 @@ pre {
   font-family: monospace, monospace;
   border: 1px dashed rgba(250, 100, 50, 0.5);
 }
+
+.author {
+  font-size: 16px;
+  color: #999;
+}
