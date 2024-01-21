@@ -4,16 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{ site.title }}</title>
+    <link rel="stylesheet" href="/style.css" />
   </head>
   <body>
-    <h1>Welcome to {{ site.title }}</h1>
-    <a href="/about">Read about me</a>
-
-    <p>Posts</p>
-    {{#recentPosts}}
-    <p>
-      <a href="{{path}}">{{title}}</a>
-    </p>
-    {{/recentPosts}}
+    <header>
+      <a href="/">Home</a>
+      <nav>
+        <a href="/about">About</a>
+        <a href="/https://github.com/Jeong-ki">Github</a>
+      </nav>
+    </header>
+    <main>
+      <h1 class="title">Blog</h1>
+      <ul class="posts">
+        {{#recentPosts}}
+        <li class="post">
+          <a href="{{path}}">
+            <time>{{created_at}}</time>
+            <span>{{title}}</span>
+          </a>
+        </li>
+        {{/recentPosts}}
+      </ul>
+    </main>
   </body>
 </html>

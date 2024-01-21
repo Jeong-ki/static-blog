@@ -4,10 +4,13 @@ import frontMatter from "front-matter";
 import showdown from "showdown";
 import config from "../config.js";
 
-const DIST = config.build.dist;
-const PAGES = config.build.pages;
-const CONTENTS = config.build.contents;
-const CONTENTS_SLUG = config.build.contentSlug;
+const {
+  assets: ASSETS,
+  dist: DIST,
+  pages: PAGES,
+  contents: CONTENTS,
+  contentSlug: CONTENTS_SLUG,
+} = config.build;
 
 async function renderFile(source, dest) {
   const recentPosts = await getRecentPosts();
@@ -24,7 +27,7 @@ async function getRecentPosts() {
       (await fs.readFile(`${CONTENTS}/${file}/index.md`)).toString()
     );
     result.push({
-      ...attributes,
+      ...config.updatePost(attributes),
       path: `/${CONTENTS_SLUG}/${attributes.slug}`,
     });
   }
@@ -63,9 +66,17 @@ async function buildContentsFiles() {
   }
 }
 
+async function copyAssets() {
+  const files = await fs.readdir(ASSETS);
+  for (const file of files) {
+    await fs.copyFile(`${ASSETS}/${file}`, `${DIST}/${file}`);
+  }
+}
+
 async function build() {
   await fs.mkdir(DIST);
 
+  await copyAssets();
   await buildHtmlFiles();
   await buildContentsFiles();
 }
