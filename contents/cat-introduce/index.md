@@ -1,7 +1,7 @@
 ---
 slug: cat-introduce
 title: 고양이에 대한 소개
-created_at: 2024-01-21T05:16:26.583Z
+created_at: 2024-01-21T05:16:26
 ---
 
 <!-- ![고양이 이미지](https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg) -->

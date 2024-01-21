@@ -6,4 +6,8 @@ export default {
     contentSlug: "post",
   },
   site: { title: "Jeong-ki", auther: "Jeong-ki" },
+  updatePost(post) {
+    post.created_at = post.created_at.toLocaleDateString();
+    return post;
+  },
 };
