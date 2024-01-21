@@ -4,9 +4,25 @@ title: 고양이에 대한 소개
 created_at: 2024-01-21T05:16:26.583Z
 ---
 
-![고양이 이미지](https://example.com/cat_image.jpg)
+<!-- ![고양이 이미지](https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg) -->
 
 고양이는 독립적이면서도 사랑스러운 동물로, 그 특유의 매력으로 많은 사람들에게 사랑받고 있습니다. 부드럽고 깨끗한 외모와 함께 고양이는 다양한 특징을 가지고 있습니다.
+
+<div class="tag_wrapper">
+  <p class="tag">
+    tag test
+  </p>
+</div>
+
+```jsx
+// myWorker.js
+onmessage = (e) => {
+  const workerResult = e.data[0] + e.data[1];
+  poseMessage(workerResult);
+};
+```
+
+`onmessage` 핸들러를 사용하면 메시지가 수신될 때마다 코드를 실행할 수 있으며, 메시지 자체는 메시지 이벤트의 data 속성에서 사용할 수 있습니다. 위 예시에서는 받은 두 값을 더해서 `poseMessage`로 결괏값을 다시 메인 스레드에게 보냅니다.
 
 ## 특징
 

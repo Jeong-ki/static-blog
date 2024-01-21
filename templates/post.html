@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | {{ site.title }}</title>
+    <title>{{ post.title }} | {{ site.title }}</title>
   </head>
   <body>
-    <h1>About me...</h1>
+    <h1>{{ post.title }}</h1>
+    <p>Written by {{ site.auther }} at {{ post.created_at }}</p>
+    {{{ post.body }}}
   </body>
 </html>

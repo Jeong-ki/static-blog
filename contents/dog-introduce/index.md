@@ -4,7 +4,7 @@ title: 강아지에 대한 소개
 created_at: 2024-01-21T05:16:26.583Z
 ---
 
-![강아지 이미지](https://example.com/dog_image.jpg)
+![강아지 이미지](https://upload.wikimedia.org/wikipedia/commons/6/6e/Golde33443.jpg)
 
 강아지는 사람들에게 큰 기쁨을 주는 사랑스러운 동물 중 하나입니다. 그들은 충성스럽고 친절한 성격으로 유명하며, 많은 가정에서 가장 소중한 가족 구성원 중 하나로 여겨집니다.
 
