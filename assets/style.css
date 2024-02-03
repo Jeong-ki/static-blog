@@ -16,7 +16,7 @@ html {
 @media (min-width: 768px) {
   html {
     font-size: 125%;
-    max-width: 42em;
+    max-width: 38em;
   }
 }
 
@@ -191,7 +191,7 @@ header a + a {
 .posts .post a {
   display: flex;
   align-items: center;
-  padding: 0.5em 0;
+  padding: 0.6em 0;
   color: black;
 }
 .posts .post a:hover,
@@ -220,4 +220,8 @@ pre {
 .author {
   font-size: 16px;
   color: #999;
+}
+
+.container_about li {
+  padding: 5px;
 }
